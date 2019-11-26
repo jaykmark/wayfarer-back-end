@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-// mongoose.connect( process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" );
-const dbUrl = process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" ;
+const dbUrl = process.env.MONGODB_URI || "Connected to server" ;
 
 mongoose
   .connect(dbUrl, {
