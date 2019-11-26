@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-const dbUrl = process.env.MONGODB_URI || "Connected to server" ;
+const dbUrl = process.env.MONGODB_URI || "Connected to server";
 
-mongoose
-  .connect(dbUrl, {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
@@ -13,8 +12,8 @@ mongoose
   .catch(err => console.log(`MongoDB connection: ${err} `));
 
 module.exports = {
-  City: require("./City"),
+  City: require("./city"),
   User: require("./Users"),
-  Post: require("./Post"),
-  Comment: require('./Comments'),
+  Post: require("./post"),
+  Comment: require('./comments'),
 };
